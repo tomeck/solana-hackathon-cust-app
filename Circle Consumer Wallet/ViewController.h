@@ -9,6 +9,9 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *lblBalance;
+@property (weak, nonatomic) IBOutlet UILabel *lblCurrency;
+- (IBAction)btnPayNow:(id)sender;
 
 @end
 
