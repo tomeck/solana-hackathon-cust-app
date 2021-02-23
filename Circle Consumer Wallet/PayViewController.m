@@ -7,6 +7,7 @@
 
 #import "PayViewController.h"
 #import "AppDelegate.h"
+#import "UIUtils.h"
 
 @interface PayViewController ()
 
@@ -16,7 +17,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    // Setup the contents of the payment button
+    [self setupPayButton];
+}
+
+- (void) setupPayButton {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSString *scannedText = appDelegate.scanText;
+    
+    // Split the scanned text by the pipe delimiter
+    NSArray *splits = [scannedText componentsSeparatedByString:@"|"];
+//    NSString *chainAddress = splits[0];
+    NSString *merchantName = splits[1];
+    NSString *amount = splits[2];
+    
+    NSString *btnText = [NSString stringWithFormat:@"Pay %@ $%@ now", merchantName, amount];
+    [self.btnPay setTitle:btnText forState:UIControlStateNormal];
 }
 
 /*
@@ -40,10 +57,8 @@
 
 - (IBAction)btnPayClicked:(id)sender {
 
-//    dispatch_async(dispatch_get_main_queue(), ^{
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSString *scannedText = appDelegate.scanText;
-//    });
     
 //    NSString *scannedText = @"FUoAafzWRYp8dsshzKqadN7QXGZQAJ6M5dc95jN1d9GJ|Sal's Pizza|23.45";
     
@@ -80,12 +95,17 @@
             
             if( error ) {
                 NSLog( @"Failed to transfer funds to merchant, error = %@", error );
+
+                // In any case, we need to pop back to the main View Controller
+                [self performSegueWithIdentifier:@"unwindToMainVCSegue" sender:self];
             }
             else {
                 NSHTTPURLResponse *httpResp = (NSHTTPURLResponse *) response;
                 long httpStatus = httpResp.statusCode;
                 
                 if( httpStatus != 201) {
+                    
+
                     NSLog( @"Failed to transfer funds to merchant, httpStatus = %ld", httpStatus );
                 }
                 else {
@@ -94,16 +114,26 @@
                     NSDictionary *dictResponse = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
                     // And dump the dictionary
                     NSLog(@"%@", dictResponse);
-                    //self.lblBalance.text = dictResponse[@"data"][@"balances"][0][@"amount"];
-                    //self.lblCurrency.text = dictResponse[@"data"][@"balances"][0][@"currency"];
                     
-                    // Refresh screen to see updated balance
-//                    [self getBalance];
-                }
+                    NSString *transactionID = dictResponse[@"data"][@"id"];
+                    NSString *lblMessage = [NSString stringWithFormat:@"Payment successful; transaction ID is %@", transactionID];
+                    
+                    self.lblComplete.text = lblMessage;
+                    
+                    [self.btnPay setHidden:YES];
+                    [self.btnCancel setTitle:@"Done" forState:UIControlStateNormal];
+
+                    
+                        // We need to pop back to the main View Controller
+//                        [self performSegueWithIdentifier:@"unwindToMainVCSegue" sender:self];
+
+
+                 }
             }
+            
         });
 
-       
+
     }];
     
     // Execute the task

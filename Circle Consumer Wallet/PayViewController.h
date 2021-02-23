@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PayViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnPay;
+@property (weak, nonatomic) IBOutlet UILabel *lblComplete;
+@property (weak, nonatomic) IBOutlet UIButton *btnCancel;
+
 - (IBAction)btnPayClicked:(id)sender;
 - (IBAction)btnCancelClicked:(id)sender;
 

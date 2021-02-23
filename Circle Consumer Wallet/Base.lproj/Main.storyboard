@@ -154,20 +154,31 @@
                                 <connections>
                                     <action selector="btnCancelClicked:" destination="vEO-o7-ky4" eventType="touchUpInside" id="CWk-mb-Gmj"/>
                                     <action selector="btnPayNow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Zd-3W-LtF"/>
+                                    <segue destination="SeR-KA-V3M" kind="unwind" identifier="unwindToMainVCSegue" unwindAction="unwindToNewTransactionViewController:" id="wcC-L5-1oV"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATE-QW-57v">
+                                <rect key="frame" x="14" y="204" width="387" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="22"/>
+                                <color key="textColor" red="0.2272113264" green="0.78460723160000001" blue="0.34887948629999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ie-bE-zTy"/>
                         <color key="backgroundColor" red="0.13725367190000001" green="0.1372537315" blue="0.1372534037" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="6by-ed-22h"/>
                     <connections>
+                        <outlet property="btnCancel" destination="ygC-4L-LEC" id="4h1-20-gty"/>
                         <outlet property="btnPay" destination="H9v-Yf-Vzd" id="xzb-MU-dBz"/>
+                        <outlet property="lblComplete" destination="ATE-QW-57v" id="rne-9F-0WI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zD7-eE-i5i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="SeR-KA-V3M" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="538" y="115"/>
+            <point key="canvasLocation" x="1166.6666666666667" y="78.348214285714278"/>
         </scene>
     </scenes>
     <resources>

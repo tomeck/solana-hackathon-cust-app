@@ -7,7 +7,7 @@
 #import <UIKit/UIKit.h>
 #import "UIUtils.h"
 
-@implementation UIUtils
+@implementation UIUtils 
 
 + (void) displayAlertWithTitle:(NSString *)title andMessage:(NSString *)message onView:(UIViewController *)view withCompletion:(void (^ __nullable)(void))completion {
     

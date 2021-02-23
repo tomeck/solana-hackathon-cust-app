@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblBalance;
 @property (weak, nonatomic) IBOutlet UILabel *lblCurrency;
 
+-(IBAction)unwindToNewTransactionViewController:(UIStoryboardSegue *)segue;
+
 
 @end
 

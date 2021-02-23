@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9E4A5E6F25E552DA0000983C /* beep1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A5E6E25E552DA0000983C /* beep1.mp3 */; };
 		9E4A5E7425E55BF70000983C /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A5E7325E55BF70000983C /* PayViewController.m */; };
+		9E4A5E7725E5B27B0000983C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8DA25E539DF000B16CD /* UIUtils.m */; };
 		9EE3E8B925E44CC8000B16CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8B825E44CC8000B16CD /* AppDelegate.m */; };
 		9EE3E8BC25E44CC8000B16CD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8BB25E44CC8000B16CD /* SceneDelegate.m */; };
 		9EE3E8BF25E44CC9000B16CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8BE25E44CC8000B16CD /* ViewController.m */; };
@@ -191,6 +192,7 @@
 				9EE3E8BF25E44CC9000B16CD /* ViewController.m in Sources */,
 				9E4A5E7425E55BF70000983C /* PayViewController.m in Sources */,
 				9EE3E8D525E538E5000B16CD /* ScanViewController.m in Sources */,
+				9E4A5E7725E5B27B0000983C /* UIUtils.m in Sources */,
 				9EE3E8B925E44CC8000B16CD /* AppDelegate.m in Sources */,
 				9EE3E8CA25E44CCC000B16CD /* main.m in Sources */,
 				9EE3E8BC25E44CC8000B16CD /* SceneDelegate.m in Sources */,

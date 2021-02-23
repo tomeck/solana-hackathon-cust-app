@@ -13,20 +13,22 @@
 
 @implementation ViewController
 
-//// JTE TODO move this to an include file or move into PLIST (it's copied in PayViewController.m)
-//const NSString *API_KEY = @"QVBJX0tFWTpmNTE0ZDU5MWM5YTE4MjI4NGViZGMxNmYwNmQ4ZGVhMjpiOWFlZmEwODU2ZTA4ZDVhODgxNjY2MzQ3NGQ4ODA5Nw";
-//const NSString *CIRCLE_API_BASE_URL = @"https://api-sandbox.circle.com/v1";
-////const NSString *MERCHANT_SOLANA_ADDRESS = @"FUoAafzWRYp8dsshzKqadN7QXGZQAJ6M5dc95jN1d9GJ";
-//const NSString *CONSUMER_WALLET_ID = @"1000066046";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillAppear:(BOOL)animated {
     [self getBalance];
 }
+
+
+// This is here so we can support an unwind segue
+// landing here
+-(IBAction)unwindToNewTransactionViewController:(UIStoryboardSegue *)segue {
+    [self getBalance];
+}
+
 
 // Get the Consumer Wallet balance from Circle
 - (void)getBalance {
