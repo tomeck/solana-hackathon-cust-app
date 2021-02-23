@@ -16,6 +16,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.CIRCLE_API_KEY = @"QVBJX0tFWTpmNTE0ZDU5MWM5YTE4MjI4NGViZGMxNmYwNmQ4ZGVhMjpiOWFlZmEwODU2ZTA4ZDVhODgxNjY2MzQ3NGQ4ODA5Nw";
+    self.CIRCLE_API_BASE_URL = @"https://api-sandbox.circle.com/v1";
+    self.CONSUMER_WALLET_ID = @"1000066046";
+    
+
     return YES;
 }
 

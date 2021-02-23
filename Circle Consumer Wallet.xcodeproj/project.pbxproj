@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E4A5E6F25E552DA0000983C /* beep1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A5E6E25E552DA0000983C /* beep1.mp3 */; };
+		9E4A5E7425E55BF70000983C /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A5E7325E55BF70000983C /* PayViewController.m */; };
 		9EE3E8B925E44CC8000B16CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8B825E44CC8000B16CD /* AppDelegate.m */; };
 		9EE3E8BC25E44CC8000B16CD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8BB25E44CC8000B16CD /* SceneDelegate.m */; };
 		9EE3E8BF25E44CC9000B16CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8BE25E44CC8000B16CD /* ViewController.m */; };
@@ -14,9 +16,18 @@
 		9EE3E8C425E44CCC000B16CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3E8C325E44CCC000B16CD /* Assets.xcassets */; };
 		9EE3E8C725E44CCC000B16CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EE3E8C525E44CCC000B16CD /* LaunchScreen.storyboard */; };
 		9EE3E8CA25E44CCC000B16CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8C925E44CCC000B16CD /* main.m */; };
+		9EE3E8D525E538E5000B16CD /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8D425E538E5000B16CD /* ScanViewController.m */; };
+		9EE3E8D825E5398E000B16CD /* UIUtils.h in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8D725E5398E000B16CD /* UIUtils.h */; };
+		9EE3E8E125E53BC2000B16CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE3E8E025E53BC2000B16CD /* AVFoundation.framework */; };
+		9EE3E8E525E53C44000B16CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE3E8E425E53C44000B16CD /* CoreFoundation.framework */; };
+		9EE3E8E725E53C54000B16CD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE3E8E625E53C54000B16CD /* Foundation.framework */; };
+		9EE3E8E925E53C62000B16CD /* ImageCaptureCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EE3E8E825E53C62000B16CD /* ImageCaptureCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9E4A5E6E25E552DA0000983C /* beep1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep1.mp3; sourceTree = "<group>"; };
+		9E4A5E7225E55BF70000983C /* PayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		9E4A5E7325E55BF70000983C /* PayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		9EE3E8B425E44CC8000B16CD /* Circle Consumer Wallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Circle Consumer Wallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EE3E8B725E44CC8000B16CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9EE3E8B825E44CC8000B16CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +40,14 @@
 		9EE3E8C625E44CCC000B16CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EE3E8C825E44CCC000B16CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9EE3E8C925E44CCC000B16CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9EE3E8D325E538E5000B16CD /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		9EE3E8D425E538E5000B16CD /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
+		9EE3E8D725E5398E000B16CD /* UIUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIUtils.h; sourceTree = "<group>"; };
+		9EE3E8DA25E539DF000B16CD /* UIUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIUtils.m; sourceTree = "<group>"; };
+		9EE3E8E025E53BC2000B16CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9EE3E8E425E53C44000B16CD /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		9EE3E8E625E53C54000B16CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9EE3E8E825E53C62000B16CD /* ImageCaptureCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageCaptureCore.framework; path = System/Library/Frameworks/ImageCaptureCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +55,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE3E8E525E53C44000B16CD /* CoreFoundation.framework in Frameworks */,
+				9EE3E8E725E53C54000B16CD /* Foundation.framework in Frameworks */,
+				9EE3E8E925E53C62000B16CD /* ImageCaptureCore.framework in Frameworks */,
+				9EE3E8E125E53BC2000B16CD /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +70,7 @@
 			children = (
 				9EE3E8B625E44CC8000B16CD /* Circle Consumer Wallet */,
 				9EE3E8B525E44CC8000B16CD /* Products */,
+				9EE3E8DF25E53BC2000B16CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,12 +92,30 @@
 				9EE3E8BD25E44CC8000B16CD /* ViewController.h */,
 				9EE3E8BE25E44CC8000B16CD /* ViewController.m */,
 				9EE3E8C025E44CC9000B16CD /* Main.storyboard */,
+				9E4A5E6E25E552DA0000983C /* beep1.mp3 */,
 				9EE3E8C325E44CCC000B16CD /* Assets.xcassets */,
 				9EE3E8C525E44CCC000B16CD /* LaunchScreen.storyboard */,
 				9EE3E8C825E44CCC000B16CD /* Info.plist */,
 				9EE3E8C925E44CCC000B16CD /* main.m */,
+				9EE3E8D325E538E5000B16CD /* ScanViewController.h */,
+				9EE3E8D425E538E5000B16CD /* ScanViewController.m */,
+				9EE3E8D725E5398E000B16CD /* UIUtils.h */,
+				9EE3E8DA25E539DF000B16CD /* UIUtils.m */,
+				9E4A5E7225E55BF70000983C /* PayViewController.h */,
+				9E4A5E7325E55BF70000983C /* PayViewController.m */,
 			);
 			path = "Circle Consumer Wallet";
+			sourceTree = "<group>";
+		};
+		9EE3E8DF25E53BC2000B16CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9EE3E8E825E53C62000B16CD /* ImageCaptureCore.framework */,
+				9EE3E8E625E53C54000B16CD /* Foundation.framework */,
+				9EE3E8E425E53C44000B16CD /* CoreFoundation.framework */,
+				9EE3E8E025E53BC2000B16CD /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +174,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E4A5E6F25E552DA0000983C /* beep1.mp3 in Resources */,
 				9EE3E8C725E44CCC000B16CD /* LaunchScreen.storyboard in Resources */,
 				9EE3E8C425E44CCC000B16CD /* Assets.xcassets in Resources */,
 				9EE3E8C225E44CC9000B16CD /* Main.storyboard in Resources */,
@@ -146,9 +189,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE3E8BF25E44CC9000B16CD /* ViewController.m in Sources */,
+				9E4A5E7425E55BF70000983C /* PayViewController.m in Sources */,
+				9EE3E8D525E538E5000B16CD /* ScanViewController.m in Sources */,
 				9EE3E8B925E44CC8000B16CD /* AppDelegate.m in Sources */,
 				9EE3E8CA25E44CCC000B16CD /* main.m in Sources */,
 				9EE3E8BC25E44CC8000B16CD /* SceneDelegate.m in Sources */,
+				9EE3E8D825E5398E000B16CD /* UIUtils.h in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
