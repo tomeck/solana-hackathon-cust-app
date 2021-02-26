@@ -20,7 +20,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [self getBalance];
-    [self getRecentTransactions];
+//    [self getRecentTransactions];
 }
 
 
@@ -28,7 +28,7 @@
 // landing here
 -(IBAction)unwindToNewTransactionViewController:(UIStoryboardSegue *)segue {
     [self getBalance];
-    [self getRecentTransactions];
+//    [self getRecentTransactions];
 }
 
 
