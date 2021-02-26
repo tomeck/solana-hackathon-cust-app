@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *btnPay;
 @property (weak, nonatomic) IBOutlet UILabel *lblComplete;
 @property (weak, nonatomic) IBOutlet UIButton *btnCancel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 - (IBAction)btnPayClicked:(id)sender;
 - (IBAction)btnCancelClicked:(id)sender;

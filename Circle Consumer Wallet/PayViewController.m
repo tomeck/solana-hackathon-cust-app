@@ -20,6 +20,8 @@
     
     // Setup the contents of the payment button
     [self setupPayButton];
+    
+//    self.activityIndicator = [UIActivityIndicatorView new];
 }
 
 - (void) setupPayButton {
@@ -62,6 +64,13 @@
     
 //    NSString *scannedText = @"FUoAafzWRYp8dsshzKqadN7QXGZQAJ6M5dc95jN1d9GJ|Sal's Pizza|23.45";
     
+    // Disappear the Pay and Cancel buttons
+    [self.btnPay setHidden:YES];
+    [self.btnCancel setHidden:YES];
+    
+    // Display activity indicator
+    [self.activityIndicator startAnimating];
+    
     NSDictionary *reqDict = [self getTransferDictForText:scannedText];
     
     // Create NSURLSession object.
@@ -93,6 +102,9 @@
         // We need to dispatch this to the main/UI thread
         dispatch_async(dispatch_get_main_queue(), ^{
             
+            // Stop activity indicator
+            [self.activityIndicator stopAnimating];
+
             if( error ) {
                 NSLog( @"Failed to transfer funds to merchant, error = %@", error );
 
@@ -104,7 +116,6 @@
                 long httpStatus = httpResp.statusCode;
                 
                 if( httpStatus != 201) {
-                    
 
                     NSLog( @"Failed to transfer funds to merchant, httpStatus = %ld", httpStatus );
                 }
@@ -118,22 +129,20 @@
                     NSString *transactionID = dictResponse[@"data"][@"id"];
                     NSString *lblMessage = [NSString stringWithFormat:@"Payment successful; transaction ID is %@", transactionID];
                     
-                    self.lblComplete.text = lblMessage;
+                    NSLog(@"1");
                     
-                    [self.btnPay setHidden:YES];
-                    [self.btnCancel setTitle:@"Done" forState:UIControlStateNormal];
+                    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Success"
+                                                                                   message:lblMessage
+                                                                            preferredStyle:UIAlertControllerStyleAlert];
 
-                    
-                        // We need to pop back to the main View Controller
-//                        [self performSegueWithIdentifier:@"unwindToMainVCSegue" sender:self];
+                    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                                          handler:^(UIAlertAction * action) {[self performSegueWithIdentifier:@"unwindToMainVCSegue" sender:self];}];
 
-
+                    [alert addAction:defaultAction];
+                    [self presentViewController:alert animated:YES completion:nil];
                  }
             }
-            
         });
-
-
     }];
     
     // Execute the task
@@ -145,7 +154,7 @@
     // Split the scanned text by the pipe delimiter
     NSArray *splits = [text componentsSeparatedByString:@"|"];
     NSString *chainAddress = splits[0];
-    NSString *merchantName = splits[1];
+//    NSString *merchantName = splits[1];
     NSString *amount = splits[2];
 
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];

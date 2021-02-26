@@ -1,5 +1,5 @@
 //
-//  UIUtils.h
+//  UIUtils.m
 //  Circle Consumer Wallet
 //
 //  Created by Tom Eck on 2/23/21.
@@ -15,8 +15,7 @@
                                                                    message:message
                                                             preferredStyle:UIAlertControllerStyleAlert];
 
-    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * action) {}];
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
 
     [alert addAction:defaultAction];
     [view presentViewController:alert animated:YES completion:completion];

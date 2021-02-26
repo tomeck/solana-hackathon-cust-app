@@ -305,12 +305,17 @@
                                     <segue destination="SeR-KA-V3M" kind="unwind" identifier="unwindToMainVCSegue" unwindAction="unwindToNewTransactionViewController:" id="wcC-L5-1oV"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="YIm-Lm-OsA">
+                                <rect key="frame" x="194" y="324" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5Ie-bE-zTy"/>
                         <color key="backgroundColor" red="0.13725367190000001" green="0.1372537315" blue="0.1372534037" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="6by-ed-22h"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="YIm-Lm-OsA" id="oCl-du-aY3"/>
                         <outlet property="btnCancel" destination="ygC-4L-LEC" id="4h1-20-gty"/>
                         <outlet property="btnPay" destination="H9v-Yf-Vzd" id="xzb-MU-dBz"/>
                         <outlet property="lblComplete" destination="ATE-QW-57v" id="rne-9F-0WI"/>
