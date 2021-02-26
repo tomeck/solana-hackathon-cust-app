@@ -283,4 +283,23 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     });
 }
+
+
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
+{
+
+    NSLog(@"test");
+    if(item.tag==2)
+    {
+
+        UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UITabBarController *TimeLine = [mainStoryboard instantiateViewControllerWithIdentifier:@"Post_Photo_One"];
+        [self presentViewController:TimeLine animated:YES completion:nil];
+    }
+    else
+    {
+        //your code
+    }
+}
 @end
