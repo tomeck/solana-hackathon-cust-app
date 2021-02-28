@@ -16,19 +16,31 @@
 @implementation TransactionCollectionViewController
 
 static NSString * const reuseIdentifier = @"TransactionCell";
+bool isRefreshing = NO;
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Setup a UI Refresh Control (pull down to refresh)
+    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
+    refreshControl.tintColor = [UIColor grayColor];
+    [refreshControl addTarget:self action:@selector(getRecentTransactions) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:refreshControl];
+    self.collectionView.alwaysBounceVertical = YES;
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
 //    [self.collectionView registerClass:[TransactionCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    [self getRecentTransactions];
+//    [self getRecentTransactions];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self getRecentTransactions]; // to reload selected cell
+}
 /*
 #pragma mark - Navigation
 
@@ -98,6 +110,11 @@ static NSString * const reuseIdentifier = @"TransactionCell";
 - (void)getRecentTransactions {
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     
+    if( isRefreshing ) {
+        return;
+    }
+    isRefreshing = YES;
+    
     // Create NSURLSession object.
     NSURLSession *session = [NSURLSession sharedSession];
     
@@ -143,6 +160,8 @@ static NSString * const reuseIdentifier = @"TransactionCell";
                     [self.collectionView reloadData];
                }
             }
+            
+            isRefreshing = NO;
         });
     }];
     
