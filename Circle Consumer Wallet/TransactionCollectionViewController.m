@@ -23,10 +23,10 @@ bool isRefreshing = NO;
     [super viewDidLoad];
     
     // Setup a UI Refresh Control (pull down to refresh)
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.tintColor = [UIColor grayColor];
-    [refreshControl addTarget:self action:@selector(getRecentTransactions) forControlEvents:UIControlEventValueChanged];
-    [self.collectionView addSubview:refreshControl];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    self.refreshControl.tintColor = [UIColor grayColor];
+    [self.refreshControl addTarget:self action:@selector(getRecentTransactions) forControlEvents:UIControlEventValueChanged];
+    [self.collectionView addSubview:self.refreshControl];
     self.collectionView.alwaysBounceVertical = YES;
 
     // Uncomment the following line to preserve selection between presentations
@@ -162,6 +162,7 @@ bool isRefreshing = NO;
             }
             
             isRefreshing = NO;
+            [self.refreshControl endRefreshing];
         });
     }];
     
