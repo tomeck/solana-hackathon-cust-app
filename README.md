@@ -4,6 +4,9 @@ Simulated customer wallet iPhone app for the Solana DeFi Hackathon March 1 2021
 # What it does
 This fully native iPhone app simulates a consumer digital wallet.  The wallet holds USDC, can make instant payments at a merchant's Point of Sale, and can review a history of transactions.  Please refer to the repo tomeck/solana-hackathon-pos which contains a simulated Point of Sale terminal that accepts payments from this consumer wallet.
 
+# Building
+This app was built using Xcode 12.4 on an iMac running macOS Big Sur 11.2.1.  Please contact the author ("dr.teck at gmail") for help with building
+
 # How it works
 The app integrates with the [Circle API's](https://developers.circle.com) to do the following:
 
