@@ -10,7 +10,6 @@
 		9E4A5E6F25E552DA0000983C /* beep1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9E4A5E6E25E552DA0000983C /* beep1.mp3 */; };
 		9E4A5E7425E55BF70000983C /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E4A5E7325E55BF70000983C /* PayViewController.m */; };
 		9E4A5E7725E5B27B0000983C /* UIUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8DA25E539DF000B16CD /* UIUtils.m */; };
-		9EA02D8D25E9933300847FB1 /* TabView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA02D8C25E9933300847FB1 /* TabView.storyboard */; };
 		9EA02D9125E997D700847FB1 /* TransactionCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA02D9025E997D700847FB1 /* TransactionCollectionViewController.m */; };
 		9EA02D9525E99DAF00847FB1 /* TransactionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EA02D9425E99DAF00847FB1 /* TransactionCollectionViewCell.m */; };
 		9EE3E8B925E44CC8000B16CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EE3E8B825E44CC8000B16CD /* AppDelegate.m */; };
@@ -32,7 +31,6 @@
 		9E4A5E6E25E552DA0000983C /* beep1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep1.mp3; sourceTree = "<group>"; };
 		9E4A5E7225E55BF70000983C /* PayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		9E4A5E7325E55BF70000983C /* PayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
-		9EA02D8C25E9933300847FB1 /* TabView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabView.storyboard; sourceTree = "<group>"; };
 		9EA02D8F25E997D700847FB1 /* TransactionCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionCollectionViewController.h; sourceTree = "<group>"; };
 		9EA02D9025E997D700847FB1 /* TransactionCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionCollectionViewController.m; sourceTree = "<group>"; };
 		9EA02D9325E99DAF00847FB1 /* TransactionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionCollectionViewCell.h; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				9EE3E8DA25E539DF000B16CD /* UIUtils.m */,
 				9E4A5E7225E55BF70000983C /* PayViewController.h */,
 				9E4A5E7325E55BF70000983C /* PayViewController.m */,
-				9EA02D8C25E9933300847FB1 /* TabView.storyboard */,
 				9EA02D8F25E997D700847FB1 /* TransactionCollectionViewController.h */,
 				9EA02D9025E997D700847FB1 /* TransactionCollectionViewController.m */,
 				9EA02D9325E99DAF00847FB1 /* TransactionCollectionViewCell.h */,
@@ -189,7 +186,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E4A5E6F25E552DA0000983C /* beep1.mp3 in Resources */,
-				9EA02D8D25E9933300847FB1 /* TabView.storyboard in Resources */,
 				9EE3E8C725E44CCC000B16CD /* LaunchScreen.storyboard in Resources */,
 				9EE3E8C425E44CCC000B16CD /* Assets.xcassets in Resources */,
 				9EE3E8C225E44CC9000B16CD /* Main.storyboard in Resources */,
