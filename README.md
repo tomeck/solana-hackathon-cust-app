@@ -15,4 +15,5 @@ The app integrates with the [Circle API's](https://developers.circle.com) to do 
 There are three ways to track the successful completion of the transfer:
 
 1. **Within the app**, the user can tap the "Transactions" tab to see the transaction history.  The transactions are sorted in reverse-chronological order, hence the topmost entry will reflect the current transfer in progress.  You will notice that the transaction is initially in the *pending* state.  You can pull the list down to refresh it.   In a few seconds it will reflect the *complete* status
-2. You can also track the transaction via the **Solana blockchain explorer**.
+2. You can also track the transaction by inspecting the merchant's USDC reception address on the Solana network using the [Solana Blockchain explorer](https://explorer.solana.com/address/FUoAafzWRYp8dsshzKqadN7QXGZQAJ6M5dc95jN1d9GJ?cluster=testnet)
+3. Finally, you can use the ["Poor Man's Point of Sale" server](https://github.com/tomeck/solana-hackathon-pos/tree/main) that was also submitted for this hackathon challenge
