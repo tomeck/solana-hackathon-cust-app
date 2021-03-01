@@ -121,7 +121,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" reuseIdentifier="TransactionCell" id="1qM-xO-qp1" customClass="TransactionCollectionViewCell">
-                                <rect key="frame" x="7" y="0.0" width="399" height="103"/>
+                                <rect key="frame" x="7.5" y="0.0" width="399" height="103"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Trs-I6-LdM">
                                     <rect key="frame" x="0.0" y="0.0" width="399" height="103"/>
