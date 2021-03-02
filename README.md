@@ -1,7 +1,17 @@
 # solana-hackathon-cust-app
 Simulated customer wallet iPhone app for the Solana DeFi Hackathon March 1 2021
 
-# What it does
+# Demo videos
+If you want to see the demo of this consumer wallet as well as a simulated back-end for the merchant's Point of Sale system please visit:
+
+- [Demo of consumer wallet](https://youtu.be/3Fl4cfl4Cyg)
+
+- [Demo of merchant Point-of-Sale back-end](https://youtu.be/-l5u6NxjZfQ)
+
+# Repo for the Merchant Point-of-Sale Back-end
+Since I was only able to submit one repo for this hackathon, I am providing here the link to the [Github repo for the merchant point-of-sale back-end](https://github.com/tomeck/solana-hackathon-pos)
+
+# What this customer wallet app does
 This fully native iPhone app simulates a consumer digital wallet.  The wallet holds USDC, can make instant payments at a merchant's Point of Sale, and can review a history of transactions.  Please refer to the repo tomeck/solana-hackathon-pos which contains a simulated Point of Sale terminal that accepts payments from this consumer wallet.
 
 # Building
